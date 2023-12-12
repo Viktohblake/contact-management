@@ -44,12 +44,13 @@ function insertNewRecord(new_entry) {
     cell1.innerHTML = new_entry.username;
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = new_entry.number;
-    cell4 = newRow.insertCell(2);
-    cell4.innerHTML = new_entry.email;
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = `<a class="edits" onClick="onEdit(this)"><p>Edit</p>
-                       <a class="edits" onClick="onDelete(this)"><p>Delete</p>
-                       </a>`;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = new_entry.email;
+    cell3 = newRow.insertCell(3);
+    cell3.innerHTML = `<div class="flex">  <a class="edits" onClick="onEdit(this)"><button>Edit</button>
+                       <a class="edits" onClick="onDelete(this)"><button>Delete</button>
+                       </a></div>`
+  ;
 }
 
 /* ---- Gets the input from user ---- */
