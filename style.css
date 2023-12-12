@@ -3,6 +3,20 @@ body{
     overflow-y: hidden;
 }
 
+tbody{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.thead{
+    margin: 00px 40px 00px 40px;
+    font-weight: 400;
+    font-size: 22px;
+}
+.data_set{
+    flex: 1;
+    margin-left: 10px;
+}
+
 .title{
     color: black;
     font-size: 28px;
