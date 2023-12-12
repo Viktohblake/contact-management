@@ -47,9 +47,9 @@ function insertNewRecord(new_entry) {
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = new_entry.email;
     cell3 = newRow.insertCell(3);
-    cell3.innerHTML = `<div class="flex">  <a class="edits" onClick="onEdit(this)"><button>Edit</button>
+    cell3.innerHTML = `<a class="edits" onClick="onEdit(this)"><button>Edit</button>
                        <a class="edits" onClick="onDelete(this)"><button>Delete</button>
-                       </a></div>`
+                       </a>`
   ;
 }
 
