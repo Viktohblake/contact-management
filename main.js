@@ -65,16 +65,31 @@ function readFormData() {
 
 /* ---- Validation ---- */
 function validate() {
-    isValid = true;
-    if(document.getElementById("username").value == "") {
+    var isValid = true;
+
+    // Regular expressions for validation
+    var nameRegex = /^[a-zA-Z\s]+$/;  // Only letters and spaces allowed for the name
+    var numberRegex = /^\d+$/;         // Only digits allowed for the number
+    var emailRegex = /^\S+@\S+\.\S+$/; // Basic email validation
+
+    // Validate Name
+    if (!nameRegex.test(document.getElementById("username").value.trim())) {
         isValid = false;
-        console.log("invalid");
-        alert("Enter the name of Contact");
+        alert("Invalid Name. Please enter only letters and spaces.");
     }
-    else {
-        isValid = true;
-        console.log("valid");
+
+    // Validate Contact Number
+    if (!numberRegex.test(document.getElementById("number").value.trim())) {
+        isValid = false;
+        alert("Invalid Contact Number. Please enter only digits.");
     }
+
+    // Validate Email
+    if (!emailRegex.test(document.getElementById("email").value.trim())) {
+        isValid = false;
+        alert("Invalid Email. Please enter a valid email address.");
+    }
+
     return isValid;
 }
 
